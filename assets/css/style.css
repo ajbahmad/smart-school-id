@@ -1,0 +1,42 @@
+/* *{
+    border: 1px solid red;
+} */
+.left-sidebar {
+      margin-top: auto;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      z-index: 1000;
+      width: 260px;
+    }
+
+    .border-samar{
+      border: 1px solid #ddd;
+    }
+
+    .app-header {
+      position: fixed;
+      top: 0;
+      left: 260px;
+      right: 0;
+      z-index: 1001;
+      box-shadow: 0 1px 15px rgba(0,0,0,0.1);
+    }
+
+    .body-wrapper {
+      margin-left: 260px;
+      padding-top: 70px;
+      /* background-color: #969696; */
+    }
+
+    @media (max-width: 1199.98px) {
+      .left-sidebar {
+        left: -260px;
+      }
+      .app-header {
+        left: 0;
+      }
+      .body-wrapper {
+        margin-left: 0;
+      }
+    }

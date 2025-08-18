@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistem Absensi Sekolah</title>
+  <link rel="shortcut icon" type="image/png" href="assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- sidebar -->
+    <aside class="left-sidebar">
+      <div>
+        <div class="user-profile position-relative" style="background: url(assets/images/backgrounds/user-info.jpg) no-repeat;">
+          <div class="profile-img">
+            <img src="assets/images/profile/user-1.jpg" alt="user" class="w-100 rounded-circle overflow-hidden" />
+          </div>
+
+          <div class="close-btn cursor-pointer d-flex align-items-center justify-content-center d-xl-none end-0 p-2 position-absolute sidebartoggler text-white top-0"
+            id="sidebarCollapse">
+            <i class="ti ti-x fs-7"></i>
+          </div>
+          
+          <div class="profile-text hide-menu pt-1 dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown w-100 text-white d-block position-relative" 
+              id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Fitri Aulia
+            </a>
+            <div class="dropdown-menu animated flipInY" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item d-flex gap-2" href="javascript:void(0)">
+                <i data-feather="user" class="feather-sm text-info"></i>
+                My Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item d-flex gap-2" href="javascript:void(0)">
+                <i data-feather="settings" class="feather-sm text-warning"></i>
+                Account Setting
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item d-flex gap-2" href="javascript:void(0)">
+                <i data-feather="log-out" class="feather-sm text-danger"></i>
+                Logout
+              </a>
+              <div class="dropdown-divider"></div>
+              <div class="px-3 py-2">
+                <a href="javascript:void(0)" class="btn d-block w-100 btn-info rounded-pill">
+                  View Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- navbar -->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                <iconify-icon icon="solar:home-outline" width="24" height="24"></iconify-icon>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="scan.html" aria-expanded="false">
+              <iconify-icon icon="solar:magnifier-outline" width="24" height="24"></iconify-icon>
+              <span class="hide-menu">Scan</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="data-siswa.html" aria-expanded="false">
+              <iconify-icon icon="solar:user-id-outline" width="24" height="24"></iconify-icon>
+              <span class="hide-menu">Siswa</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="data-kelas.html" aria-expanded="false">
+              <iconify-icon icon="solar:database-outline" width="24" height="24"></iconify-icon>
+              <span class="hide-menu">Master Kelas</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="jadwal.html" aria-expanded="false">
+              <iconify-icon icon="solar:calendar-outline" width="24" height="24"></iconify-icon>
+              <span class="hide-menu">Jadwal</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="absensi.html" aria-expanded="false">
+              <iconify-icon icon="solar:document-text-outline" width="24" height="24"></iconify-icon>
+              <span class="hide-menu">Absen</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="laporan.html" aria-expanded="false">
+              <iconify-icon icon="solar:document-add-outline" width="24" height="24"></iconify-icon>
+              <span class="hide-menu">Laporan</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pengguna.html" aria-expanded="false">
+              <iconify-icon icon="solar:user-outline" width="24" height="24"></iconify-icon>
+              <span class="hide-menu">Pengguna</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <!-- akhiran sidebar -->
+
+    <div class="body-wrapper">
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <div class="brand-logo d-none d-xl-flex align-items-center justify-content-between">
+              <a href="index.html" class="text-nowrap logo-img d-flex align-items-center gap-2">
+                <b class="logo-icon">
+                  <img src="assets/images/logos/logo-light-icon.svg" alt="homepage" class="dark-logo" />
+                </b>
+                <span class="logo-text">
+                  <img src="assets/images/logos/logo-light-text.svg" alt="homepage" class="dark-logo ps-2" />
+                </span>
+              </a>
+            </div>
+
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="javascript:void(0)" id="drop1" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="solar:bell-linear" class="fs-6"></iconify-icon>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-animate-up" aria-labelledby="drop1">
+                <div class="message-body">
+                  <a href="javascript:void(0)" class="dropdown-item">Item 1</a>
+                  <a href="javascript:void(0)" class="dropdown-item">Item 2</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- akhira navbar -->
+
+
+      <!-- isi konten -->
+      <main>
+        <div class="body-wrapper-inner">
+          <div class="card m-4">
+            <div class="card-body">
+              <h5 class="card-title mb-4 fs-9">ABSENSI</h5>
+             <form class="d-flex align-items-center gap-2 justify-content-end mb-3" id="filterForm">
+                <select class="form-select w-auto" id="kelasFilter" name="kelas">
+                  <option value="">Semua Kelas</option>
+                  <option value="XIA">Kelas XI A</option>
+                  <option value="XIB">Kelas XI B</option>
+                  <option value="XIC">Kelas XI C</option>
+                </select>
+
+                <select class="form-select w-auto" id="dateRange" name="dateRange">
+                  <option value="">Date Range</option>
+                  <option value="today">Hari Ini</option>
+                  <option value="week">Minggu Ini</option>
+                  <option value="month">Bulan Ini</option>
+                </select>
+                <input type="text" class="form-control w-auto" id="searchName" name="searchName" placeholder="Search">
+                <button type="button" class="btn btn-primary rounded-2 px-4" id="btnFilter">Filter</button>
+                <button type="button" class="btn btn-danger rounded-2 px-4" id="btnReset">Reset</button>
+              </form>
+
+              <div class="table-responsive">
+                <table class="table table-striped table-hover table-bordered rounded border-samar">
+                  <thead class="table-success">
+                    <tr class="text-center">
+                      <th scope="col">NAMA</th>
+                      <th scope="col">KELAS</th>
+                      <th scope="col">TANGGAL</th>
+                      <th scope="col">CLOCK IN</th>
+                      <th scope="col">CLOCK OUT</th>
+                      <th scope="col">STATUS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Denis</td>
+                      <td>XIIA</td>
+                      <td>17/08/2025</td>
+                      <td>07:05:10</td>
+                      <td>00:00:00</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-danger">Lambat</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Adi</td>
+                      <td>XIIA</td>
+                      <td>17/08/2025</td>
+                      <td>07:05:10</td>
+                      <td>00:00:00</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-success">Hadir</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Denis</td>
+                      <td>XIIB</td>
+                      <td>17/08/2025</td>
+                      <td>07:05:10</td>
+                      <td>00:00:00</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-success">Hadir</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Murni</td>
+                      <td>XIIC</td>
+                      <td>17/08/2025</td>
+                      <td>07:05:10</td>
+                      <td>00:00:00</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-danger">Lambat</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Santi</td>
+                      <td>XIIA</td>
+                      <td>17/08/2025</td>
+                      <td>07:05:10</td>
+                      <td>00:00:00</td>
+                        <td class="text-center">
+                        <button class="btn btn-sm btn-outline-success">Hadir</button>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    <!-- akhiran konten -->
+  </div>
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sidebarmenu.js"></script>
+  <script src="assets/js/app.min.js"></script>
+  <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+</html>
