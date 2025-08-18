@@ -1,0 +1,6 @@
+.left-sidebar, .app-header{
+    top: 0 !important;
+}
+.container-fluid {
+    padding-top: 15vh !important;
+}
