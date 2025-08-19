@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+<head> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sistem Absensi Sekolah</title>
@@ -185,135 +185,73 @@
 
       <!-- isi konten -->
       <main>
-        <div class="body-wrapper-inner">
-          <div class="card m-4">
-            <div class="card-body">
-              <h5 class="card-title mb-4 fs-9">SISWA</h5>
-             <form class="d-flex align-items-center gap-2 justify-content-end mb-3" id="filterForm">
-                <input type="text" class="form-control w-auto" id="searchName" name="searchName" placeholder="Search">
-                <button type="button" class="btn btn-primary rounded-2 px-4" id="btnFilter">Filter</button>
-                <button type="button" class="btn btn-danger rounded-2 px-4" id="btnReset">Reset</button>
-                <a href="tambah-siswa.html" class="btn btn-success rounded-2 px-4" id="btnAddData">+Add Data</a>
-              </form>
-
-              <div class="table-responsive">
-                <table class="table table-striped table-hover table-bordered rounded border-samar">
-                  <thead class="table-success">
-                    <tr class="text-center">
-                      <th scope="col">NAMA</th>
-                      <th scope="col">KELAS</th>
-                      <th scope="col">NIS</th>
-                      <th scope="col">ALAMAT</th>
-                      <th scope="col">TETALA</th>
-                      <th scope="col">L/P</th>
-                      <th scope="col">WA ORTU</th>
-                      <th scope="col">OPSI</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Denis</td>
-                      <td>XIIA</td>
-                      <td>12301</td>
-                      <td>Jl Permata</td>
-                      <td>Pamekasan, 01 Juni 2006</td>
-                      <td>L</td>
-                      <td>087729097650</td>
-                      <td class="text-center">
-                          <div aria-label="Opsi">
-                            <a href="show-siswa.html" class="btn btn-sm btn-outline-info">Show</a>
-                            <a href="edit-siswa.html" class="btn btn-sm btn-outline-warning">Edit</a>
-                            <button type="button" class="btn btn-sm btn-outline-danger" onclick=
-                                "return confirm('Apakah yakin ingin menghapus data ini ?')"> 
-                                    Hapus
-                            </button>
-                          </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Adi</td>
-                      <td>XIIA</td>
-                      <td>12302</td>
-                      <td>Jl Permata</td>
-                      <td>Pamekasan, 01 Juni 2006</td>
-                      <td>L</td>
-                      <td>087729097650</td>
-                      <td class="text-center">
-                          <div aria-label="Opsi">
-                            <a href="show-siswa.html" class="btn btn-sm btn-outline-info">Show</a>
-                            <a href="edit-siswa.html" class="btn btn-sm btn-outline-warning">Edit</a>
-                            <button type="button" class="btn btn-sm btn-outline-danger" onclick=
-                                "return confirm('Apakah yakin ingin menghapus data ini ?')"> 
-                                    Hapus
-                            </button>
-                          </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Denis</td>
-                      <td>XIIB</td>
-                      <td>12303</td>
-                      <td>Jl Permata</td>
-                      <td>Pamekasan, 01 Juni 2006</td>
-                      <td>L</td>
-                      <td>087729097650</td>
-                      <td class="text-center">
-                          <div aria-label="Opsi">
-                            <a href="show-siswa.html" class="btn btn-sm btn-outline-info">Show</a>
-                            <a href="edit-siswa.html" class="btn btn-sm btn-outline-warning">Edit</a>
-                            <button type="button" class="btn btn-sm btn-outline-danger" onclick=
-                                "return confirm('Apakah yakin ingin menghapus data ini ?')"> 
-                                    Hapus
-                            </button>
-                          </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Murni</td>
-                      <td>XIIC</td>
-                      <td>12304</td>
-                      <td>Jl Permata</td>
-                      <td>Pamekasan, 01 Juni 2006</td>
-                      <td>P</td>
-                      <td>087729097650</td>
-                      <td class="text-center">
-                          <div aria-label="Opsi">
-                            <a href="show-siswa.html" class="btn btn-sm btn-outline-info">Show</a>
-                            <a href="edit-siswa.html" class="btn btn-sm btn-outline-warning">Edit</a>
-                            <button type="button" class="btn btn-sm btn-outline-danger" onclick=
-                                "return confirm('Apakah yakin ingin menghapus data ini ?')"> 
-                                    Hapus
-                            </button>
-                          </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Santi</td>
-                      <td>XIIA</td>
-                      <td>12305</td>
-                      <td>Jl Permata</td>
-                      <td>Pamekasan, 01 Juni 2006</td>
-                      <td>P</td>
-                      <td>087729097650</td>
-                        <td class="text-center">
-                          <div aria-label="Opsi">
-                            <a href="show-siswa.html" class="btn btn-sm btn-outline-info">Show</a>
-                            <a href="edit-siswa.html" class="btn btn-sm btn-outline-warning">Edit</a>
-                            <button type="button" class="btn btn-sm btn-outline-danger" onclick=
-                                "return confirm('Apakah yakin ingin menghapus data ini ?')"> 
-                                    Hapus
-                            </button>
-                          </div>
-                        </td>
-                    </tr>
-                  </tbody>
-                </table>
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-6">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h5 class="card-title mb-4 fs-9 text-center">EDIT SISWA</h5>
+                  <form id="editSiswaForm">
+                    <div class="mb-3">
+                      <label for="nama" class="form-label">Nama</label>
+                      <input type="text" class="form-control" id="nama" name="nama" value="Denis" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="kelas" class="form-label">Kelas</label>
+                      <select class="form-select" id="kelas" name="kelas" required>
+                        <option value="XIIA" selected>XIIA</option>
+                        <option value="XIIB">XIIB</option>
+                        <option value="XIIC">XIIC</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="nis" class="form-label">NIS</label>
+                      <input type="text" class="form-control" id="nis" name="nis" value="12301" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="alamat" class="form-label">Alamat</label>
+                      <input type="text" class="form-control" id="alamat" name="alamat" value="Jl Permata" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="photo" class="form-label">Photo</label>
+                      <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
+                      <small class="text-muted">Type file: JPG, JPEG, PNG Max 5 MB</small>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                      <label for="tetala" class="form-label">Tempat, Tanggal Lahir</label>
+                      <input type="text" class="form-control" id="tetala" name="tetala" value="Pamekasan, 01 Juni 2006" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="jk" class="form-label">Jenis Kelamin</label>
+                      <select class="form-select" id="jk" name="jk" required>
+                        <option value="L" selected>Laki-laki</option>
+                        <option value="P">Perempuan</option>
+                      </select>
+                    </div>
+                    <div class="mb-3"></div>
+                      <label for="wa_ortu" class="form-label">WA Ortu</label>
+                      <input type="text" class="form-control" id="wa_ortu" name="wa_ortu" value="087729097650" required>
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button type="submit" class="btn btn-success rounded-2 px-4">Simpan</button>
+                      <a href="siswa.html" class="btn btn-secondary rounded-2 px-4">Batal</a>
+                    </div>
+                    <br>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-    <!-- akhiran konten -->
+      <script>
+        document.getElementById('editSiswaForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Data siswa berhasil diubah!');
+          // Implementasi update data ke backend di sini
+        });
+      </script>
+        <!-- akhiran konten -->
   </div>
   <script src="assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
