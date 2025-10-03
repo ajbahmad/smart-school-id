@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$database = "nama_database";
+$username = "root";
+$password = "";
+$database = "absensi-smk";
 
 // Membuat koneksi
 $conn = mysqli_connect($servername, $username, $password, $database);

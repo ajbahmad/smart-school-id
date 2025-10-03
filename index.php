@@ -1,3 +1,38 @@
+<?php
+session_start();
+include "koneksi.php";
+
+// Cek apakah sudah login
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+    <script>
+        Swal.fire({
+            icon: 'warning',
+            title: 'Akses Ditolak',
+            text: 'Silakan login terlebih dahulu!'
+        }).then(() => {
+            window.location='login.php';
+        });
+    </script>";
+    exit();
+}
+
+// Logout
+if (isset($_GET['logout'])) {
+    session_destroy();
+    echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Logout Berhasil',
+            text: 'Anda telah keluar dari sistem.'
+        }).then(() => {
+            window.location='login.php';
+        });
+    </script>";
+    exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -7,18 +42,14 @@
   <title>Smart-Absensi</title>
   <link rel="shortcut icon" type="image/png" href="assets/images/logos/favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.min.css" />
-<<<<<<< HEAD
   <link rel="stylesheet" href="assets/css/custom.css"/>
-</head>
-
-<body>
-=======
-  <link rel="stylesheet" href="assets/css/custom.css" />
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
   </head>
   <body>
->>>>>>> c075c67 (add: update custom.css, index.html dan halaman master kelas)
   
   <!--  Body Wrappers -->
 
